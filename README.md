@@ -8,6 +8,9 @@
 
 
 <p>This web application aims to address the issue of financial illiteracy for college students. A common complication amongst college students is graduating with more debt than expected. This can be due to unexpected accumulation of interest during and after college as well as due to unrealistic expectations of post-graduation earnings. By providing information and generating visualizations for the user, we will help inform and eliminate illiteracy for every student who is interested in learning about their student loan debt by using our product.</p>
+<br>
+
+### Project is live at: https://katelynkunzmann.github.io/interest/
 
 
 <br>  
