@@ -1,5 +1,8 @@
 # Interest
-<center><img src="public/img/interesticon_green.png" alt="graduation cap with dollar sign in background" width="250"></center>  
+<img style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 25%;" src="public/img/interesticon_mintgreen.png" alt="graduation cap with dollar sign in background" width="250">  
 <br>
 <h2 style="text-align:center">Student Loan Calculation and Visualization Tool</h2>
 
