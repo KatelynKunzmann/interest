@@ -1,5 +1,5 @@
 import React from 'react'
-import graduationCapImage from "./img/interesticon_mintgreen_cropped.png";
+import graduationCapImage from "../img/interesticon_mintgreen_cropped.png";
 
 function Home() {
   return (
