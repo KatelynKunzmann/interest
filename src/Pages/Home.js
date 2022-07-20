@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import graduationCapImage from "../img/interesticon_mintgreen_cropped.png";
 
 function Home() {
   return (
     <>
-    <h1 class="title">Welcome to Interest!
+    <h1 className="title">Welcome to Interest!
         <figure>
         <img src={graduationCapImage} width="100" 
         alt="graduation cap with dollar sign in background"></img>
@@ -37,9 +38,7 @@ function Home() {
         </div>
     </section>
 
-    <div class="clicky-btn">
-        Get Started!
-    </div>
+    <Link className="clicky-btn" to="/form">Get Started!</Link>
 
     </main>
     </>
