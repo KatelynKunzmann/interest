@@ -1,38 +1,125 @@
-.App {
+
+:root {
+  /*** Color Theme Variables ***/
+  --dark-purple: #170028;
+  --peach: #e96444; 
+  --rose-pink: #a4124c;
+  --purple: #3424ac;
+
+  --dark-green: #014e33;
+  --forest-green: #3a8107;
+  --mint-green: #33b885;
+  --brown: #2e1c0b;
+  --navy: #01132b;
+  --pale-blue: #6eaeeb;
+
+  /***** Other colors that go well with this theme ******/
+  /* pale green, cyan, lavender, pale blue, orange ******/
+  /******************************************************/
+
+  /*** Spacing for different elements/sections ***/
+  --small-spacing: 15px;
+  --med-spacing: 50px;
+  --large-spacing: 75px;
+
+  /*** Text Formatting Variables ***/
+  --h1-bold: 500;
+  --h2-h3-bold: 300;
+
+
+  background: var(--navy);
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-style: normal;
+  letter-spacing: 0.015rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0px 25px 100px; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+  width: 100%;
+  font-size: 1.1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
+  color: var(--peach);
+  font-weight: var(--h1-bold);
+  text-align: center;
+  margin-bottom: var(--small-spacing);
+}
+
+h2, h3 {
+  color: var(--mint-green);
+  font-weight: var(--h2-h3-bold);
+  text-align: center;
+  margin-bottom: var(--small-spacing);
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+section, figure {
+  color: var(--rose-pink);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: var(--med-spacing);
+}
+
+ul {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+}
+
+#description {
   color: white;
+  margin-top: var(--med-spacing);
+  margin-bottom: var(--med-spacing);
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*********** BUTTONS ***********/
+.clicky-btn {
+  text-decoration: none;
+  background: var(--mint-green);
+  font-size: 20px;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0 7px 0px var(--dark-green);
+  display: inline-block;
+  transition: all .2s;
+  position: relative;
+  padding: 20px 25px;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  margin:0 20px;
+}
+.clicky-btn:active {
+  top: 3px;
+  box-shadow: 0 2px 0px #387796;
+  transition: all .2s;
+}
+/*********** END BUTTONS ***********/
+
+input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
 }
