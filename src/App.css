@@ -110,37 +110,59 @@ ul {
 }
 /*********** END BUTTONS ***********/
 
+/*********** INPUTS ***********/
 .input {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  display: block;
-  box-sizing: border-box;
   width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  border: 1px solid white;
-  padding: 10px 15px;
-  margin-bottom: 15px;
-  font-size: 14px;
+  resize: vertical;
 }
 
-.verify {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  display: block;
-  box-sizing: border-box;
-  border: 1px solid white;
-  padding: 10px 15px;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  width: 100%;
-  font-size: 14px;
-  background: #032b60;
-  color: white;
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
 
-.verify::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
+.container {
+  margin: auto;
+  max-width: 70%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: left;
 }
+
+.clicky-btn {
+  margin: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 73%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .col-25, .col-75 {
+    width: 95%;
+    margin: 0;
+  }
+}
+
+
