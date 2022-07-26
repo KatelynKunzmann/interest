@@ -35,7 +35,7 @@
 }
 
 body {
-  padding: 0px 25px 100px; 
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -165,5 +165,25 @@ label {
     margin: 0;
   }
 }
+
+
+/*********** Navigation Bar ***********/
+.navigationBar {
+  background-color: white;
+  overflow: hidden;
+  height: 50px;
+}
+
+.navigationBar h1 {
+  padding-right: 20px;
+  font-size: large;
+  float:right;
+}
+
+.navigationBar img {
+  float: left;
+  padding-top: 5px;
+}
+
 
 

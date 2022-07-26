@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import NavigationBar from '../components/NavigationBar';
 
 function Verify() {
   const { register, handleSubmit } = useForm();
@@ -12,6 +13,8 @@ function Verify() {
 
   return (
     <>
+
+    <NavigationBar />
 
     <h1>Please verify information entered</h1>
 

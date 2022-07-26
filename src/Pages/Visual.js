@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import NavigationBar from '../components/NavigationBar';
 
 function Visual() {
   const location = useLocation();
@@ -7,6 +8,9 @@ function Visual() {
   
   return (
     <>
+
+    <NavigationBar />
+    
     <h1>Visualization Page</h1>
 
     <h2>

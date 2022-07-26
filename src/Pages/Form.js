@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
+import NavigationBar from '../components/NavigationBar';
 
 function Form() {
   const { register, handleSubmit } = useForm();
@@ -9,7 +10,8 @@ function Form() {
 
   return (
     <>
-    
+    <NavigationBar />
+
     <h1>Please enter loan information</h1>
 
     <div className="container">
