@@ -40,7 +40,7 @@ function Home() {
         </div>
     </section>
 
-    <Link className="clicky-btn" to="/input">Get Started!</Link>
+    <Link className="clicky-btn" to="/form">Get Started!</Link>
 
     </main>
     </>
