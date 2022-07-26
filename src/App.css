@@ -1,0 +1,189 @@
+
+:root {
+  /*** Color Theme Variables ***/
+  --dark-purple: #170028;
+  --peach: #e96444; 
+  --rose-pink: #a4124c;
+  --purple: #3424ac;
+
+  --dark-green: #014e33;
+  --forest-green: #3a8107;
+  --mint-green: #33b885;
+  --brown: #2e1c0b;
+  --navy: #01132b;
+  --pale-blue: #6eaeeb;
+
+  /***** Other colors that go well with this theme ******/
+  /* pale green, cyan, lavender, pale blue, orange ******/
+  /******************************************************/
+
+  /*** Spacing for different elements/sections ***/
+  --small-spacing: 15px;
+  --med-spacing: 50px;
+  --large-spacing: 75px;
+
+  /*** Text Formatting Variables ***/
+  --h1-bold: 500;
+  --h2-h3-bold: 300;
+
+
+  background: var(--navy);
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-style: normal;
+  letter-spacing: 0.015rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+h1 {
+  color: var(--peach);
+  font-weight: var(--h1-bold);
+  text-align: center;
+  margin-bottom: var(--small-spacing);
+}
+
+h2, h3 {
+  color: var(--mint-green);
+  font-weight: var(--h2-h3-bold);
+  text-align: center;
+  margin-bottom: var(--small-spacing);
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+section, figure {
+  color: var(--rose-pink);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: var(--med-spacing);
+}
+
+ul {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: left;
+}
+
+#description {
+  color: white;
+  margin-top: var(--med-spacing);
+  margin-bottom: var(--med-spacing);
+  text-align: center;
+}
+
+
+/*********** BUTTONS ***********/
+.clicky-btn {
+  border: none;
+  text-decoration: none;
+  background: var(--mint-green);
+  font-size: 20px;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0 7px 0px var(--dark-green);
+  display: inline-block;
+  transition: all .2s;
+  position: relative;
+  padding: 20px 25px;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  margin:0 20px;
+}
+.clicky-btn:active {
+  top: 3px;
+  box-shadow: 0 2px 0px #387796;
+  transition: all .2s;
+}
+/*********** END BUTTONS ***********/
+
+/*********** INPUTS ***********/
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.container {
+  margin: auto;
+  max-width: 70%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: left;
+}
+
+.container .clicky-btn {
+  margin: 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 73%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .col-25, .col-75 {
+    width: 95%;
+    margin: 0;
+  }
+}
+
+
+/*********** Navigation Bar ***********/
+.navigationBar {
+  background-color: white;
+  overflow: hidden;
+  height: 50px;
+}
+
+.navigationBar h1 {
+  padding-right: 20px;
+  font-size: large;
+  float:right;
+}
+
+.navigationBar img {
+  float: left;
+  padding-top: 5px;
+}
+
+
+
