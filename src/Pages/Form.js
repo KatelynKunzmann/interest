@@ -1,24 +1,21 @@
-import React from 'react'
+import React from 'react';
 import { useForm } from "react-hook-form";
-import { useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
-function Verify() {
+function Form() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-
-  const location = useLocation();
-  const input = location.state;
+  
 
   return (
     <>
-
-    <h1>Please verify information entered</h1>
+    
+    <h1>Please enter loan information</h1>
 
     <div className="container">
         
     <form onSubmit={handleSubmit((data) => {
-        navigate('/visual', {state: data});
+        navigate('/verify', {state: data});
     })}>
 
     <div className="row">
@@ -26,7 +23,7 @@ function Verify() {
             <label>First Name</label>
         </div>
         <div class="col-75">
-            <input className="input" {...register("firstName", { required: true })} defaultValue={input.firstName}/>
+            <input className="input" {...register("firstName", { required: true })} placeholder="enter your first name" />
         </div>
     </div>
 
@@ -35,7 +32,7 @@ function Verify() {
             <label>Last Name</label>
         </div>
         <div class="col-75">
-            <input className="input" {...register("lastName", { required: true })} defaultValue={input.lastName}/>
+            <input className="input" {...register("lastName", { required: true })} placeholder="enter your last name" />
         </div>
     </div>
 
@@ -44,7 +41,7 @@ function Verify() {
             <label>Loan Amount</label>
         </div>
         <div class="col-75">
-            <input className="input" {...register("loanAmount", { required: true })} defaultValue={input.loanAmount}/>
+            <input className="input" {...register("loanAmount", { required: true })} placeholder="enter the loan amount" />
         </div>
     </div>
 
@@ -53,7 +50,7 @@ function Verify() {
             <label>Loan Term</label>
         </div>
         <div class="col-75">
-            <input className="input" {...register("loanTerm", { required: true })} defaultValue={input.loanTerm}/>
+            <input className="input" {...register("loanTerm", { required: true })} placeholder="enter the loan term" />
         </div>
     </div>
 
@@ -62,11 +59,11 @@ function Verify() {
             <label>Interest Rate</label>
         </div>
         <div class="col-75">
-            <input className="input" {...register("interestRate", { required: true })} defaultValue={input.interestRate}/>
+            <input className="input" {...register("interestRate", { required: true })} placeholder="enter your loan's interest rate" />
         </div>
     </div>
 
-    <input className="clicky-btn" type="submit" value="Confirm"/>
+    <input className="clicky-btn" type="submit"/>
 
     </form>
 
@@ -76,4 +73,4 @@ function Verify() {
   )
 }
 
-export default Verify
+export default Form
