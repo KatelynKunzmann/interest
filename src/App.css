@@ -110,7 +110,7 @@ ul {
 }
 /*********** END BUTTONS ***********/
 
-input {
+.input {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -122,4 +122,25 @@ input {
   padding: 10px 15px;
   margin-bottom: 15px;
   font-size: 14px;
+}
+
+.verify {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 14px;
+  background: #032b60;
+  color: white;
+}
+
+.verify::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }

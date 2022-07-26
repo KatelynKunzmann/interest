@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 
@@ -14,12 +13,12 @@ function Form() {
         navigate('/verify', {state: data});
       })}
     >
-      <input {...register("firstName")} placeholder="First name" />
-      <input {...register("lastName")} placeholder="Last name" />
-      <input {...register("loanAmount")} placeholder="Loan amount" />
-      <input {...register("loanTerm")} placeholder="Loan Term" />
-      <input {...register("interestRate")} placeholder="Interest Rate" />
-      <input type="submit" />
+      <input className="input" {...register("firstName", { required: true })} placeholder="First name" />
+      <input className="input" {...register("lastName", { required: true })} placeholder="Last name" />
+      <input className="input" {...register("loanAmount", { required: true })} placeholder="Loan amount" />
+      <input className="input" {...register("loanTerm", { required: true })} placeholder="Loan Term" />
+      <input className="input" {...register("interestRate", { required: true })} placeholder="Interest Rate" />
+      <input className="clicky-btn" type="submit" />
     </form>
     </>
   )
