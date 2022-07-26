@@ -28,6 +28,8 @@ function Visual() {
     <h2>
       Interest Rate: {input.interestRate}
     </h2>
+
+    <button className="clicky-btn">Evaluate Another Loan</button>
     </>
   )
 }

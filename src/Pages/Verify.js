@@ -13,27 +13,64 @@ function Verify() {
   return (
     <>
     <h1>Verify the information you entered</h1>
-    <form onSubmit={handleSubmit((data) => {
-        navigate('/visual', {state: data});
-      })}
-    >
-      <h2>First Name</h2>
-      <input className="verify" {...register("firstName")} defaultValue={input.firstName} />
-      
-      <h2>Last Name</h2>
-      <input className="verify" {...register("lastName")} defaultValue={input.lastName} />
-      
-      <h2>Loan Amount</h2>
-      <input className="verify" {...register("loanAmount")} defaultValue={input.loanAmount} />
-      
-      <h2>Loan Term</h2>
-      <input className="verify" {...register("loanTerm")} defaultValue={input.loanTerm} />
-      
-      <h2>Interest Rate</h2>
-      <input className="verify" {...register("interestRate")} defaultValue={input.interestRate} />
-      
-      <input type="submit" value="Confirm" className="clicky-btn"/>
-    </form>
+
+    <div className="container">
+        
+        <form onSubmit={handleSubmit((data) => {
+            navigate('/visual', {state: data});
+        })}>
+
+        <div className="row">
+            <div class="col-25">
+                <label>First Name</label>
+            </div>
+            <div class="col-75">
+                <input className="input" {...register("firstName", { required: true })} defaultValue={input.firstName}/>
+            </div>
+        </div>
+
+        <div className="row">
+            <div class="col-25">
+                <label>Last Name</label>
+            </div>
+            <div class="col-75">
+                <input className="input" {...register("lastName", { required: true })} defaultValue={input.lastName}/>
+            </div>
+        </div>
+
+        <div className="row">
+            <div class="col-25">
+                <label>Loan Amount</label>
+            </div>
+            <div class="col-75">
+                <input className="input" {...register("loanAmount", { required: true })} defaultValue={input.loanAmount}/>
+            </div>
+        </div>
+
+        <div className="row">
+            <div class="col-25">
+                <label>Loan Term</label>
+            </div>
+            <div class="col-75">
+                <input className="input" {...register("loanTerm", { required: true })} defaultValue={input.loanTerm}/>
+            </div>
+        </div>
+
+        <div className="row">
+            <div class="col-25">
+                <label>Interest Rate</label>
+            </div>
+            <div class="col-75">
+                <input className="input" {...register("interestRate", { required: true })} defaultValue={input.interestRate}/>
+            </div>
+        </div>
+
+        <input className="clicky-btn" type="submit" value="Confirm"/>
+
+        </form>
+
+        </div>
+
     </>
   )
 }

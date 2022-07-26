@@ -88,6 +88,7 @@ ul {
 
 /*********** BUTTONS ***********/
 .clicky-btn {
+  border: none;
   text-decoration: none;
   background: var(--mint-green);
   font-size: 20px;
@@ -133,7 +134,7 @@ label {
   text-align: left;
 }
 
-.clicky-btn {
+.container .clicky-btn {
   margin: 0;
   margin-top: 10px;
   width: 100%;
