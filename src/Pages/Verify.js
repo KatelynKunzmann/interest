@@ -1,21 +1,39 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 function Verify() {
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+
   const location = useLocation();
-  const data = location.state;
+  const input = location.state;
+
   return (
     <>
-    <h1>Please verify the information you provided</h1>
-
-    <h2>First Name: {data.firstName}</h2>
-    <h2>Last Name: {data.lastName}</h2>
-    <h2>Loan Amount: {data.loanAmount}</h2>
-    <h2>Loan Term: {data.loanTerm}</h2>
-    <h2>Interest Rate: {data.interestRate}</h2>
-
-    <Link className="clicky-btn" to="/form">Go back</Link>
+    <h1>Verify the information you entered</h1>
+    <form onSubmit={handleSubmit((data) => {
+        navigate('/visual', {state: data});
+      })}
+    >
+      <h2>First Name</h2>
+      <input className="verify" {...register("firstName")} defaultValue={input.firstName} />
+      
+      <h2>Last Name</h2>
+      <input className="verify" {...register("lastName")} defaultValue={input.lastName} />
+      
+      <h2>Loan Amount</h2>
+      <input className="verify" {...register("loanAmount")} defaultValue={input.loanAmount} />
+      
+      <h2>Loan Term</h2>
+      <input className="verify" {...register("loanTerm")} defaultValue={input.loanTerm} />
+      
+      <h2>Interest Rate</h2>
+      <input className="verify" {...register("interestRate")} defaultValue={input.interestRate} />
+      
+      <input type="submit" value="Confirm" className="clicky-btn"/>
+    </form>
     </>
   )
 }
