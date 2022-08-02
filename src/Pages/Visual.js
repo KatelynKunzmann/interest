@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import NavigationBar from '../components/NavigationBar';
+import { Link } from 'react-router-dom';
 
 function Visual() {
   const location = useLocation();
@@ -33,7 +34,7 @@ function Visual() {
       Interest Rate: {input.interestRate}
     </h2>
 
-    <button className="clicky-btn">Evaluate Another Loan</button>
+    <Link className="clicky-btn" to="/form">Evaluate Another Loan</Link>
     </>
   )
 }
