@@ -12,7 +12,7 @@ function Form() {
     <>
     <NavigationBar />
 
-    <h1>Please enter loan information</h1>
+    <h1>Please enter information</h1>
 
     <div className="container">
         
@@ -21,47 +21,151 @@ function Form() {
     })}>
 
     <div className="row">
-        <div class="col-25">
-            <label>First Name</label>
+        <div className="col-25">
+            <label>Field of Study</label>
         </div>
-        <div class="col-75">
-            <input className="input" {...register("firstName", { required: true })} placeholder="enter your first name" />
-        </div>
-    </div>
-
-    <div className="row">
-        <div class="col-25">
-            <label>Last Name</label>
-        </div>
-        <div class="col-75">
-            <input className="input" {...register("lastName", { required: true })} placeholder="enter your last name" />
+        <div className="col-75">
+            <input className="input" {...register("fieldOfStudy")} placeholder="enter your field of study" />
         </div>
     </div>
 
     <div className="row">
-        <div class="col-25">
-            <label>Loan Amount</label>
+        <div className="col-25">
+            <label>Expected Yearly Salary</label>
         </div>
-        <div class="col-75">
-            <input className="input" {...register("loanAmount", { required: true })} placeholder="enter the loan amount" />
+        <div className="col-75">
+            <input className="input" {...register("expectedYearlySalary", { required: true })} placeholder="enter your expected yearly salary" />
         </div>
     </div>
 
     <div className="row">
-        <div class="col-25">
+        <div className="col-25">
+            <label>Expected Monthly Net Take Home</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("expectedMonthlyNetTakeHome")} placeholder="enter your expected monthly net take home" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Expected Graduation Month</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("expectedGraduationMonth", { required: true })} placeholder="enter your expected graduation month" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Expected Graduation Year</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("expectedGraduationYear", { required: true })} placeholder="enter your expected graduation year" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Loan Name</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("loanName", { required: true })} placeholder="enter the loan name" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Loan Type</label>
+        </div>
+        <div className="col-75">
+            <select className="select" {...register("loanType", { required: true })}>
+                <option value="">Select...</option>
+                <option value="federal">Federal</option>
+                <option value="private">Private</option>
+            </select>
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-75">
+            <select className="select" {...register("subsidized")}>
+                <option value="">Select...</option>
+                <option value="true">Subsidized</option>
+                <option value="false">Unsubsidized</option>
+            </select>
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Disbursement Month</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("disbursementMonth", { required: true })} placeholder="enter the disbursement month" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Disbursement Year</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("disbursementYear", { required: true })} placeholder="enter the disbursement year" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Lender</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("lender")} placeholder="enter lender" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Principal</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("principal", { required: true })} placeholder="enter the loan principal" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>Current Loan Balance</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("currentLoanBalance")} placeholder="enter your current loan balance" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
             <label>Loan Term</label>
         </div>
-        <div class="col-75">
-            <input className="input" {...register("loanTerm", { required: true })} placeholder="enter the loan term" />
+        <div className="col-75">
+            <input className="input" {...register("loanTerm", { required: true })} placeholder="enter the loan term in MONTHS" />
         </div>
     </div>
 
     <div className="row">
-        <div class="col-25">
-            <label>Interest Rate</label>
+        <div className="col-25">
+            <label>Grace Period</label>
         </div>
-        <div class="col-75">
-            <input className="input" {...register("interestRate", { required: true })} placeholder="enter your loan's interest rate" />
+        <div className="col-75">
+            <input className="input" {...register("gracePeriod")} placeholder="enter grace period in MONTHS" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
+            <label>How many months of the grace period do you expect to use?</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("gracePeriodUsage")} placeholder="enter expected grace period usage in MONTHS" />
         </div>
     </div>
 
