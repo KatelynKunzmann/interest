@@ -15,23 +15,67 @@ function Visual() {
     <h1>Visualization Page</h1>
 
     <h2>
-      First Name: {input.firstName}
+      fieldOfStudy: {input.fieldOfStudy}
     </h2>
     
     <h2>
-      Last Name: {input.lastName}
+      expectedYearlySalary: {input.expectedYearlySalary}
     </h2>
 
     <h2>
-      Loan Amount: {input.loanAmount}
+      expectedMonthlyNetTakeHome: {input.expectedMonthlyNetTakeHome}
     </h2>
 
     <h2>
-      Loan Term: {input.loanTerm}
+    expectedGraduationMonth: {input.expectedGraduationMonth}
     </h2>
 
     <h2>
-      Interest Rate: {input.interestRate}
+    expectedGraduationYear: {input.expectedGraduationYear}
+    </h2>
+
+    <h2>
+    loanName: {input.loanName}
+    </h2>
+
+    <h2>
+    loanType: {input.loanType}
+    </h2>
+
+    <h2>
+    subsidized: {input.subsidized}
+    </h2>
+
+    <h2>
+    disbursementMonth: {input.disbursementMonth}
+    </h2>
+
+    <h2>
+    disbursementYear: {input.disbursementYear}
+    </h2>
+
+    <h2>
+    lender: {input.lender}
+    </h2>
+
+    <h2>
+    principal: {input.principal}
+    </h2>
+
+    <h2>
+    currentLoanBalance: {input.currentLoanBalance}
+    </h2>
+
+    <h2>
+    loanTerm: {input.loanTerm}
+    </h2>
+
+    <h2>
+    gracePeriod: {input.gracePeriod}
+    </h2>
+
+    <h2>
+    gracePeriodUsage: {input.gracePeriodUsage}
     </h2>
 
     <Link className="clicky-btn" to="/form">Evaluate Another Loan</Link>
