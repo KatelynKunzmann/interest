@@ -52,7 +52,21 @@ function Form() {
             <label>Expected Graduation Month</label>
         </div>
         <div className="col-75">
-            <input className="input" {...register("expectedGraduationMonth", { required: true })} placeholder="enter your expected graduation month" />
+            <select className="select" {...register("expectedGraduationMonth", { required: true})}>
+                <option value="">Select...</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
         </div>
     </div>
 
@@ -102,7 +116,21 @@ function Form() {
             <label>Disbursement Month</label>
         </div>
         <div className="col-75">
-            <input className="input" {...register("disbursementMonth", { required: true })} placeholder="enter the disbursement month" />
+            <select className="select" {...register("disbursementMonth", { required: true})}>
+                <option value="">Select...</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
         </div>
     </div>
 
