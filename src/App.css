@@ -7,11 +7,13 @@
   --purple: #3424ac;
 
   --dark-green: #014e33;
-  --forest-green: #3a8107;
+  --forest-green: #18643c;
   --mint-green: #33b885;
   --brown: #2e1c0b;
   --navy: #01132b;
   --pale-blue: #6eaeeb;
+  --light-navy: #2c344b;
+  --teal: #18373c;
 
   /***** Other colors that go well with this theme ******/
   /* pale green, cyan, lavender, pale blue, orange ******/
@@ -27,7 +29,9 @@
   --h2-h3-bold: 300;
 
 
-  background: var(--navy);
+  /* background: var(--navy); */
+  background-image: url("./img/welcome-page-wide.jpg");
+  background-size: cover;
   font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
   font-style: normal;
   letter-spacing: 0.015rem;
@@ -47,14 +51,14 @@ main {
 }
 
 h1 {
-  color: var(--peach);
+  color: forest-green;
   font-weight: var(--h1-bold);
   text-align: center;
   margin-bottom: var(--small-spacing);
 }
 
 h2, h3 {
-  color: var(--mint-green);
+  color: forest-green;
   font-weight: var(--h2-h3-bold);
   text-align: center;
   margin-bottom: var(--small-spacing);
@@ -66,7 +70,7 @@ h3 {
 }
 
 section, figure {
-  color: var(--rose-pink);
+  color: forest-green;
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: var(--med-spacing);
@@ -80,7 +84,7 @@ ul {
 }
 
 #description {
-  color: white;
+  color: forest-green;
   margin-top: var(--med-spacing);
   margin-bottom: var(--med-spacing);
   text-align: center;
@@ -177,7 +181,7 @@ label {
 
 /*********** Navigation Bar ***********/
 .navigationBar {
-  background-color: white;
+  background-color: var(--light-navy);
   overflow: hidden;
   height: 50px;
 }

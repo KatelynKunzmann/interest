@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import graduationCapImage from "../img/interesticon_mintgreen_cropped.png";
 import NavigationBar from '../components/NavigationBar';
 
+
 function Home() {
   return (
     <>

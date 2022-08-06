@@ -12,7 +12,7 @@ function NavigationBar() {
                 alt="graduation cap with dollar sign in background">
             </img>
         </Link>
-        <h1>Interest</h1>
+        <h1 style={{color: 'var(--mint-green)'}}>Interest</h1>
     </div>
   )
 }
