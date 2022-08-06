@@ -17,8 +17,6 @@ function Home() {
 
     <h2>Student Loan Calculation and Visualization Tool</h2>
 
-    <br />
-
     <h3>By: Katelyn Kunzmann, Pran Sutham, and Isaiah Guthala</h3>
 
     <main>
