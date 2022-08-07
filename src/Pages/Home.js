@@ -8,6 +8,9 @@ function Home() {
   return (
     <>
     <NavigationBar />
+
+    <div className="whiteText">
+
     <h1 className="title">Welcome to Interest!
         <figure>
         <img src={graduationCapImage} width="100" 
@@ -27,23 +30,11 @@ function Home() {
         <p>Well, our app will help you with just that!</p> 
         </div> 
 
-    <section>
-        The only information you will need:
-        <div>
-        <ul>
-            <li>Example 1</li>
-            <li>Example 2</li>
-            <li>Example 3</li>
-            <li>Example 4</li>
-            <li>Example 5</li>
-            <li>Example 6</li>
-        </ul>
-        </div>
-    </section>
-
     <Link className="clicky-btn" to="/form">Get Started!</Link>
 
     </main>
+
+    </div>
     </>
   )
 }

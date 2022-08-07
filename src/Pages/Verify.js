@@ -16,7 +16,7 @@ function Verify() {
 
     <NavigationBar />
 
-    <h1>Please verify information entered</h1>
+    <h1 className="whiteText">Please verify information entered</h1>
 
     <div className="container">
         

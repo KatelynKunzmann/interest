@@ -12,7 +12,7 @@ function Form() {
     <>
     <NavigationBar />
 
-    <h1>Please enter information</h1>
+    <h1 className="whiteText">Please enter information</h1>
 
     <div className="container">
         
