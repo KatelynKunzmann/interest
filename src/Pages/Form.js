@@ -95,8 +95,8 @@ function Form() {
                         <div className="col-75">
                             <select className="select" {...register("loanType", { required: true })}>
                                 <option value="">Select...</option>
-                                <option value="Federal">Federal</option>
-                                <option value="Private">Private</option>
+                                <option value="federal">Federal</option>
+                                <option value="private">Private</option>
                             </select>
                         </div>
                     </div>
@@ -104,9 +104,9 @@ function Form() {
                     <div className="row">
                         <div className="col-75">
                             <select className="select" {...register("subsidized")}>
-                                <option value="N/A">Select...</option>
-                                <option value="Subsidized">Subsidized</option>
-                                <option value="Unsubsidized">Unsubsidized</option>
+                                <option value="">Select...</option>
+                                <option value="true">Subsidized</option>
+                                <option value="false">Unsubsidized</option>
                             </select>
                         </div>
                     </div>
@@ -172,15 +172,6 @@ function Form() {
 
                     <div className="row">
                         <div className="col-25">
-                            <label>Interest Rate</label>
-                        </div>
-                        <div className="col-75">
-                            <input className="input" {...register("interestRate")} placeholder="enter the loan interest rate" />
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-25">
                             <label>Loan Term</label>
                         </div>
                         <div className="col-75">
@@ -206,7 +197,7 @@ function Form() {
                         </div>
                     </div>
 
-                    <input className="clicky-btn" type="submit" value="Submit" />
+                    <input className="clicky-btn" type="submit" />
 
                 </form>
 

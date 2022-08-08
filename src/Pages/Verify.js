@@ -6,7 +6,6 @@ import NavigationBar from '../components/NavigationBar';
 
 
 function Verify() {
-    alert("Please verify all information entered!");
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
 
@@ -102,8 +101,8 @@ function Verify() {
                         <div className="col-75">
                             <select className="select" {...register("loanType", { required: true })} defaultValue={input.loanType}>
                                 <option value="">Select...</option>
-                                <option value="Federal">Federal</option>
-                                <option value="Private">Private</option>
+                                <option value="federal">Federal</option>
+                                <option value="private">Private</option>
                             </select>
                         </div>
                     </div>
@@ -111,9 +110,9 @@ function Verify() {
                     <div className="row">
                         <div className="col-75">
                             <select className="select" {...register("subsidized")} defaultValue={input.subsidized}>
-                                <option value="N/A">Select...</option>
-                                <option value="Subsidized">Subsidized</option>
-                                <option value="Unsubsidized">Unsubsidized</option>
+                                <option value="">Select...</option>
+                                <option value="true">Subsidized</option>
+                                <option value="false">Unsubsidized</option>
                             </select>
                         </div>
                     </div>
@@ -174,15 +173,6 @@ function Verify() {
                         </div>
                         <div className="col-75">
                             <input className="input" {...register("currentLoanBalance")} defaultValue={input.currentLoanBalance} />
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-25">
-                            <label>Interest Rate</label>
-                        </div>
-                        <div className="col-75">
-                            <input className="input" {...register("interestRate")} defaultValue={input.interestRate} />
                         </div>
                     </div>
 
