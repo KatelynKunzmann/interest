@@ -44,6 +44,15 @@ function Verify() {
 
     <div className="row">
         <div className="col-25">
+            <label>Expected Monthly Net Take Home</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("expectedMonthlyNetTakeHome")} defaultValue={input.expectedMonthlyNetTakeHome} />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
             <label>Expected Graduation Month</label>
         </div>
         <div className="col-75">
@@ -80,15 +89,6 @@ function Verify() {
         </div>
         <div className="col-75">
             <input className="input" {...register("loanName", { required: true })} defaultValue={input.loanName} />
-        </div>
-    </div>
-
-    <div className="row">
-        <div className="col-25">
-            <label>Lender</label>
-        </div>
-        <div className="col-75">
-            <input className="input" {...register("lender")} defaultValue={input.lender} />
         </div>
     </div>
 
@@ -149,6 +149,15 @@ function Verify() {
 
     <div className="row">
         <div className="col-25">
+            <label>Lender</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("lender")} defaultValue={input.lender} />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
             <label>Principal</label>
         </div>
         <div className="col-75">
@@ -171,15 +180,6 @@ function Verify() {
         </div>
         <div className="col-75">
             <input className="input" {...register("loanTerm", { required: true })} defaultValue={input.loanTerm} />
-        </div>
-    </div>
-
-    <div className="row">
-        <div className="col-25">
-            <label>Interest Rate</label>
-        </div>
-        <div className="col-75">
-            <input className="input" {...register("interestRate", { required: true })} defaultValue={input.interestRate} />
         </div>
     </div>
 

@@ -40,6 +40,15 @@ function Form() {
 
     <div className="row">
         <div className="col-25">
+            <label>Expected Monthly Net Take Home</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("expectedMonthlyNetTakeHome")} placeholder="enter your expected monthly net take home" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
             <label>Expected Graduation Month</label>
         </div>
         <div className="col-75">
@@ -76,15 +85,6 @@ function Form() {
         </div>
         <div className="col-75">
             <input className="input" {...register("loanName", { required: true })} placeholder="enter the loan name" />
-        </div>
-    </div>
-
-    <div className="row">
-        <div className="col-25">
-            <label>Lender</label>
-        </div>
-        <div className="col-75">
-            <input className="input" {...register("lender")} placeholder="enter lender" />
         </div>
     </div>
 
@@ -145,6 +145,15 @@ function Form() {
 
     <div className="row">
         <div className="col-25">
+            <label>Lender</label>
+        </div>
+        <div className="col-75">
+            <input className="input" {...register("lender")} placeholder="enter lender" />
+        </div>
+    </div>
+
+    <div className="row">
+        <div className="col-25">
             <label>Principal</label>
         </div>
         <div className="col-75">
@@ -167,15 +176,6 @@ function Form() {
         </div>
         <div className="col-75">
             <input className="input" {...register("loanTerm", { required: true })} placeholder="enter the loan term in MONTHS" />
-        </div>
-    </div>
-
-    <div className="row">
-        <div className="col-25">
-            <label>Interest Rate</label>
-        </div>
-        <div className="col-75">
-            <input className="input" {...register("interestRate", { required: true })} placeholder="enter the loan interest rate" />
         </div>
     </div>
 
