@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom'
 import NavigationBar from '../components/NavigationBar';
 import { Link } from 'react-router-dom';
 import DataTable from 'react-data-table-component';
-// import Loan from '../components/InterestCalc';
 
 
 function Visual() {
@@ -11,7 +10,6 @@ function Visual() {
   const input = location.state;
 
 
-  // Declaring loan Inputs
   var loanName = input.loanName
   var type = input.loanType
   var fedType = input.subsidized
@@ -26,28 +24,14 @@ function Visual() {
   var gracePeriodUsage = input.gracePeriodUsage
 
 
-
-  // Declaring all the non-Loan inputs
-  var study = input.fieldOfStudy // Input A
-  var salary = input.expectedYearlySalary; // Input B
+  var study = input.fieldOfStudy;
+  var salary = input.expectedYearlySalary;
   var expTakeHome = input.expectedMonthlyNetTakeHome;
 
 
-  var gradMonth = convertMonth(input.expectedGraduationMonth); // Input D. Assume that if user puts down 3, they mean March. However, 3 in JS Month means April
-  // gradMonth = gradMonth - 1; // TEMPORARY IMPERFECT FIX FOR JS DATE PROBLEM. Now gradMonth is actually March in JS. gradMonth should now output 2
+  var gradMonth = convertMonth(input.expectedGraduationMonth);
 
-  // var gradDay = 1; // Input C
-  var gradYear = input.expectedGraduationYear; // Input E
-
-  // var disbDay = 1;
-
-
-
-
-  // Creating a Loan
-  // var loan = new Loan(loanName, lender, type, fedType, gradDay, gradMonth, gradYear, disbDay, disbMonth, disbYear, principal, currLoanBal, loanTerm, interestRate, gracePeriod, gracePeriodUsage, salary);
-
-  // loan.correctLoanVariables();
+  var gradYear = input.expectedGraduationYear;
 
 
   /******************************************************/
@@ -81,7 +65,6 @@ function Visual() {
   ];
 
 
-  // Change this later
   var yearDiff = gradYear - disbYear;
   var remDisbMonths = 12 - convertMonth(disbMonth);
   var monthsToGrad = 12 * (yearDiff - 1) + gradMonth + remDisbMonths;
@@ -150,6 +133,18 @@ function Visual() {
   var yearInt15 = finalBal14 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal14;
   var yearBal15 = finalBal14 + yearInt15;
   var finalBal15 = yearBal15 - minPay;
+
+  var loanSafetyRatio = startBal / salary * 100;
+  loanSafetyRatio = readDouble(loanSafetyRatio);
+  var safetyColor = 'green';
+  var safetyMsg = 'Based upon your salary, you WILL be able to pay back this loan'
+  if (loanSafetyRatio < 10) {
+    safetyColor = 'red';
+    safetyMsg = 'Based upon your salary, you will NOT be able to pay back this loan'
+  } else if (loanSafetyRatio < 35) {
+    safetyColor = 'yellow';
+    safetyMsg = 'Based upon your salary, you SHOULD be able to pay back this loan'
+  }
 
   const data = [
 
@@ -324,6 +319,11 @@ function Visual() {
               <p>Grace Period: {gracePeriod} months</p>
 
               <p>Grace Period Usage: {gracePeriodUsage} months</p>
+
+              <div style={{ color: safetyColor }}>
+                <p>Loan Safety Ratio: {loanSafetyRatio}% </p>
+                <p>-{safetyMsg}</p>
+              </div>
             </div>
           </div>
 
@@ -336,14 +336,12 @@ function Visual() {
           </div>
         </section>
 
-
-
       </main>
+      <div>
+      </div>
       <div style={{ width: "100%" }}>
         <Link className="clicky-btn" to="/form">Evaluate Another Loan</Link>
       </div>
-
-
 
     </>
   )
