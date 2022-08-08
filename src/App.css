@@ -29,7 +29,6 @@
   --h2-h3-bold: 300;
 
 
-  /* background: var(--navy); */
   font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
   font-style: normal;
   letter-spacing: 0.015rem;
@@ -54,14 +53,14 @@ main {
 }
 
 h1 {
-  color: forest-green;
+  color: white;
   font-weight: var(--h1-bold);
   text-align: center;
   margin-bottom: var(--small-spacing);
 }
 
 h2, h3 {
-  color: forest-green;
+  color: white;
   font-weight: var(--h2-h3-bold);
   text-align: center;
   margin-bottom: var(--small-spacing);
@@ -73,7 +72,7 @@ h3 {
 }
 
 section, figure {
-  color: forest-green;
+  color: white;
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: var(--small-spacing);
