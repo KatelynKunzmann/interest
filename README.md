@@ -18,9 +18,9 @@
 ## Contributors
 Katelyn Kunzmann - https://github.com/KatelynKunzmann
 
-Pran Sutham - 
+Pran Sutham - https://github.com/pjs103
 
-Isaiah Gathala - 
+Isaiah Gathala - https://github.com/isaiahgman
 
 
 
