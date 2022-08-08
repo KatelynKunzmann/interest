@@ -29,9 +29,6 @@
   --h2-h3-bold: 300;
 
 
-  /* background: var(--navy); */
-  background-image: url("./img/welcome-page-wide.jpg");
-  background-size: cover;
   font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
   font-style: normal;
   letter-spacing: 0.015rem;
@@ -88,10 +85,43 @@ ul {
 	text-align: left;
 }
 
-#description {
-  color: forest-green;
-  margin-top: var(--med-spacing);
-  margin-bottom: var(--med-spacing);
+/*********** Displaying Info ***********/
+.loanInfo {
+  padding: 25px 25px 25px 25px;
+  width: 800px;
+}
+
+.boxed {
+  width: 500px ;
+  float: left;
+  border: 5px solid var(--forest-green);
+  border-radius: 40px/20px;
+  padding: 10px;
+  background-color: var(--mint-green);
+  text-align: left;
+} 
+
+.table {
+  float: right;
+  padding: 25px 25px 25px 25px;
+  width: 65%;
+}
+
+#boxedHomeInfo {
+  width: 500px;
+  border: 5px solid var(--forest-green);
+  border-radius: 40px/20px;
+  padding: 10px;
+  background-color: var(--mint-green);
+  text-align: center;
+}
+
+#boxedHome {
+  width: 700px;
+  border: 5px solid var(--forest-green);
+  border-radius: 40px/20px;
+  padding: 10px;
+  background-color: var(--mint-green);
   text-align: center;
 }
 /*********** End Displaying Info ***********/
