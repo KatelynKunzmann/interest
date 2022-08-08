@@ -69,79 +69,174 @@ function Visual() {
   var remDisbMonths = 12 - convertMonth(disbMonth);
   var monthsToGrad = 12 * (yearDiff - 1) + gradMonth + remDisbMonths;
 
-  var startBal = (monthsToGrad * ((interestRate / 100) / 12 * parseInt(principal)));
-  startBal = startBal + parseInt(principal);
+  var startBal = 0;
+  if (fedType == 'Subsidized') {
+    startBal = parseInt(principal);
+  } else {
+    startBal = (monthsToGrad * ((interestRate / 100) / 12 * parseInt(principal)));
+    startBal = startBal + parseInt(principal);
+  }
   var minPay = (startBal * (interestRate / 100) / 12 * Math.pow((1 + (interestRate / 100) / 12), (loanTerm))) / (Math.pow((1 + (interestRate / 100) / 12), (loanTerm)) - 1);
   minPay = minPay * 12;
 
   var yearInt1 = startBal * Math.pow((1 + (interestRate / 100) / 365), 365) - startBal;
   var yearBal1 = startBal + yearInt1;
-  var finalBal1 = yearBal1 - minPay;
+  var minPay1 = minPay;
+  if (minPay1 > yearBal1) {
+    minPay1 = yearBal1;
+  } else if (yearBal1 == 0) {
+    minPay1 = 0;
+  }
+  var finalBal1 = yearBal1 - minPay1;
 
   var yearInt2 = finalBal1 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal1;
   var yearBal2 = finalBal1 + yearInt2;
-  var finalBal2 = yearBal2 - minPay;
+  var minPay2 = minPay;
+  if (minPay2 > yearBal2) {
+    minPay2 = yearBal2;
+  } else if (yearBal2 == 0) {
+    minPay2 = 0;
+  }
+  var finalBal2 = yearBal2 - minPay2;
 
   var yearInt3 = finalBal2 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal2;
   var yearBal3 = finalBal2 + yearInt3;
-  var finalBal3 = yearBal3 - minPay;
+  var minPay3 = minPay;
+  if (minPay3 > yearBal3) {
+    minPay3 = yearBal3;
+  } else if (yearBal3 == 0) {
+    minPay3 = 0;
+  }
+  var finalBal3 = yearBal3 - minPay3;
 
   var yearInt4 = finalBal3 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal3;
   var yearBal4 = finalBal3 + yearInt4;
-  var finalBal4 = yearBal4 - minPay;
+  var minPay4 = minPay;
+  if (minPay4 > yearBal4) {
+    minPay4 = yearBal4;
+  } else if (yearBal4 == 0) {
+    minPay4 = 0;
+  }
+  var finalBal4 = yearBal4 - minPay4;
 
   var yearInt5 = finalBal4 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal4;
   var yearBal5 = finalBal4 + yearInt5;
-  var finalBal5 = yearBal5 - minPay;
+  var minPay5 = minPay;
+  if (minPay5 > yearBal5) {
+    minPay5 = yearBal5;
+  } else if (yearBal5 == 0) {
+    minPay5 = 0;
+  }
+  var finalBal5 = yearBal5 - minPay5;
 
   var yearInt6 = finalBal5 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal5;
   var yearBal6 = finalBal5 + yearInt6;
-  var finalBal6 = yearBal6 - minPay;
+  var minPay6 = minPay;
+  if (minPay6 > yearBal6) {
+    minPay6 = yearBal6;
+  } else if (yearBal6 == 0) {
+    minPay6 = 0;
+  }
+  var finalBal6 = yearBal6 - minPay6;
 
   var yearInt7 = finalBal6 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal6;
   var yearBal7 = finalBal6 + yearInt7;
-  var finalBal7 = yearBal7 - minPay;
+  var minPay7 = minPay;
+  if (minPay7 > yearBal7) {
+    minPay7 = yearBal7;
+  } else if (yearBal7 == 0) {
+    minPay7 = 0;
+  }
+  var finalBal7 = yearBal7 - minPay7;
 
   var yearInt8 = finalBal7 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal7;
   var yearBal8 = finalBal7 + yearInt8;
-  var finalBal8 = yearBal8 - minPay;
+  var minPay8 = minPay;
+  if (minPay8 > yearBal8) {
+    minPay8 = yearBal8;
+  } else if (yearBal8 == 0) {
+    minPay8 = 0;
+  }
+  var finalBal8 = yearBal8 - minPay8;
 
   var yearInt9 = finalBal8 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal8;
   var yearBal9 = finalBal8 + yearInt9;
-  var finalBal9 = yearBal9 - minPay;
+  var minPay9 = minPay;
+  if (minPay9 > yearBal9) {
+    minPay9 = yearBal9;
+  } else if (yearBal9 == 0) {
+    minPay9 = 0;
+  }
+  var finalBal9 = yearBal9 - minPay9;
 
   var yearInt10 = finalBal9 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal9;
   var yearBal10 = finalBal9 + yearInt10;
-  var finalBal10 = yearBal10 - minPay;
+  var minPay10 = minPay;
+  if (minPay10 > yearBal10) {
+    minPay10 = yearBal10;
+  } else if (yearBal10 == 0) {
+    minPay10 = 0;
+  }
+  var finalBal10 = yearBal10 - minPay10;
 
   var yearInt11 = finalBal10 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal10;
   var yearBal11 = finalBal10 + yearInt11;
-  var finalBal11 = yearBal11 - minPay;
+  var minPay11 = minPay;
+  if (minPay11 > yearBal11) {
+    minPay11 = yearBal11;
+  } else if (yearBal11 == 0) {
+    minPay11 = 0;
+  }
+  var finalBal11 = yearBal11 - minPay11;
 
   var yearInt12 = finalBal11 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal11;
   var yearBal12 = finalBal11 + yearInt12;
-  var finalBal12 = yearBal12 - minPay;
+  var minPay12 = minPay;
+  if (minPay12 > yearBal12) {
+    minPay12 = yearBal12;
+  } else if (yearBal12 == 0) {
+    minPay12 = 0;
+  }
+  var finalBal12 = yearBal12 - minPay12;
 
   var yearInt13 = finalBal12 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal12;
   var yearBal13 = finalBal12 + yearInt13;
-  var finalBal13 = yearBal13 - minPay;
+  var minPay13 = minPay;
+  if (minPay13 > yearBal13) {
+    minPay13 = yearBal13;
+  } else if (yearBal13 == 0) {
+    minPay13 = 0;
+  }
+  var finalBal13 = yearBal13 - minPay13;
 
   var yearInt14 = finalBal13 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal13;
   var yearBal14 = finalBal13 + yearInt14;
-  var finalBal14 = yearBal14 - minPay;
+  var minPay14 = minPay;
+  if (minPay14 > yearBal14) {
+    minPay14 = yearBal14;
+  } else if (yearBal14 == 0) {
+    minPay14 = 0;
+  }
+  var finalBal14 = yearBal14 - minPay14;
 
   var yearInt15 = finalBal14 * Math.pow((1 + (interestRate / 100) / 365), 365) - finalBal14;
   var yearBal15 = finalBal14 + yearInt15;
-  var finalBal15 = yearBal15 - minPay;
+  var minPay15 = minPay;
+  if (minPay15 > yearBal15) {
+    minPay15 = yearBal15;
+  } else if (yearBal15 == 0) {
+    minPay15 = 0;
+  }
+  var finalBal15 = yearBal15 - minPay15;
 
   var loanSafetyRatio = startBal / salary * 100;
   loanSafetyRatio = readDouble(loanSafetyRatio);
-  var safetyColor = 'green';
-  var safetyMsg = 'Based upon your salary, you WILL be able to pay back this loan'
-  if (loanSafetyRatio < 10) {
-    safetyColor = 'red';
-    safetyMsg = 'Based upon your salary, you will NOT be able to pay back this loan'
-  } else if (loanSafetyRatio < 35) {
+  var safetyColor = 'red';
+  var safetyMsg = 'Based upon your salary, you WILL NOT be able to pay back this loan'
+  if (loanSafetyRatio < 35) {
+    safetyColor = 'green';
+    safetyMsg = 'Based upon your salary, you WILL be able to pay back this loan'
+  } else if (loanSafetyRatio < 70) {
     safetyColor = 'yellow';
     safetyMsg = 'Based upon your salary, you SHOULD be able to pay back this loan'
   }
@@ -153,7 +248,7 @@ function Visual() {
       lastYearBal: readDouble(startBal),
       interest: readDouble(yearInt1),
       currBal: readDouble(yearBal1),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay1),
       finalBal: readDouble(finalBal1),
     },
     {
@@ -161,7 +256,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal1),
       interest: readDouble(yearInt2),
       currBal: readDouble(yearBal2),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay2),
       finalBal: readDouble(finalBal2),
     },
     {
@@ -169,7 +264,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal2),
       interest: readDouble(yearInt3),
       currBal: readDouble(yearBal3),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay3),
       finalBal: readDouble(finalBal3),
     },
     {
@@ -177,7 +272,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal3),
       interest: readDouble(yearInt4),
       currBal: readDouble(yearBal4),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay4),
       finalBal: readDouble(finalBal4),
     },
     {
@@ -185,7 +280,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal4),
       interest: readDouble(yearInt5),
       currBal: readDouble(yearBal5),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay5),
       finalBal: readDouble(finalBal5),
     },
     {
@@ -193,7 +288,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal5),
       interest: readDouble(yearInt6),
       currBal: readDouble(yearBal6),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay6),
       finalBal: readDouble(finalBal6),
     },
     {
@@ -201,7 +296,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal6),
       interest: readDouble(yearInt7),
       currBal: readDouble(yearBal7),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay7),
       finalBal: readDouble(finalBal7),
     },
     {
@@ -209,7 +304,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal7),
       interest: readDouble(yearInt8),
       currBal: readDouble(yearBal8),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay8),
       finalBal: readDouble(finalBal8),
     },
     {
@@ -217,7 +312,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal8),
       interest: readDouble(yearInt9),
       currBal: readDouble(yearBal9),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay9),
       finalBal: readDouble(finalBal9),
     },
     {
@@ -225,7 +320,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal9),
       interest: readDouble(yearInt10),
       currBal: readDouble(yearBal10),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay10),
       finalBal: readDouble(finalBal10),
     },
     {
@@ -233,7 +328,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal10),
       interest: readDouble(yearInt11),
       currBal: readDouble(yearBal11),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay11),
       finalBal: readDouble(finalBal11),
     },
     {
@@ -241,7 +336,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal11),
       interest: readDouble(yearInt12),
       currBal: readDouble(yearBal12),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay12),
       finalBal: readDouble(finalBal12),
     },
     {
@@ -249,7 +344,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal12),
       interest: readDouble(yearInt13),
       currBal: readDouble(yearBal13),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay13),
       finalBal: readDouble(finalBal13),
     },
     {
@@ -257,7 +352,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal13),
       interest: readDouble(yearInt14),
       currBal: readDouble(yearBal14),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay14),
       finalBal: readDouble(finalBal14),
     },
     {
@@ -265,7 +360,7 @@ function Visual() {
       lastYearBal: readDouble(finalBal14),
       interest: readDouble(yearInt15),
       currBal: readDouble(yearBal15),
-      minPay: readDouble(minPay),
+      minPay: readDouble(minPay15),
       finalBal: readDouble(finalBal15),
     },
   ];
@@ -288,9 +383,9 @@ function Visual() {
               </h2>
               <p>Field of Study: {study}</p>
 
-              <p>Yearly Salary: ${salary}</p>
+              <p>Yearly Salary: ${readDouble(salary)}</p>
 
-              <p>Monthly Net Take-Home Pay: ${expTakeHome}</p>
+              <p>Monthly Net Take-Home Pay: ${readDouble(expTakeHome)}</p>
 
               <p>Month of Graduation: {input.expectedGraduationMonth}</p>
 
@@ -308,9 +403,9 @@ function Visual() {
 
               <p>Lender: {lender}</p>
 
-              <p>Principal: ${principal}</p>
+              <p>Principal: ${readDouble(principal)}</p>
 
-              <p>Current Loan Balance: ${currLoanBal}</p>
+              <p>Current Loan Balance: ${readDouble(currLoanBal)}</p>
 
               <p>Interest Rate: {interestRate}%</p>
 
